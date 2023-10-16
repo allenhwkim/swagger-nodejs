@@ -20,7 +20,7 @@ const options = {
       },
     ],
   },
-  apis: ["./*.js"],
+  apis: ["./*.js"] // this will process @swagger comments./swagger-components.js and ./users.js
 };
 const specs = swaggerJsDoc(options);
 
