@@ -27,3 +27,24 @@
  *    name: Users
  *    description: list of users
  */
+
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerSpecs = swaggerJsDoc({
+    openapi: "3.0.0",
+    info: {
+      title: "Library API",
+      version: "1.0.0",
+      description: "A simple Express Library API"
+    },
+
+    servers: [
+      {
+        url: "http://localhost:3000",
+        description: "My API Documentation",
+      },
+    ],
+  },
+  apis: ["./*.js"] // this will process @swagger comments./swagger-components.js and ./users.js
+});
+
+module.exports = swaggerSpecs;
